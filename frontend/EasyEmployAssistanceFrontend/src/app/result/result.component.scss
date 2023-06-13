@@ -1,0 +1,30 @@
+.card-content {
+    font-size: 20px;
+    padding: 14px;
+}
+
+.btn-floating {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-left: 30px;
+}
+
+.percentages {
+    margin-top: 10px !important;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+
+    .recorded-video {
+        margin-left: 100px;
+    }
+}
+
+.answer-container {
+    overflow-y: auto;
+    height: 80vh;
+    margin-left: 10px;
+}

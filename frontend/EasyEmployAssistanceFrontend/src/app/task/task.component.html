@@ -1,0 +1,65 @@
+<div class="tasks-container">
+    <div class="task-header">
+        <div class="select-header">
+            <h1>Select test:</h1>
+            <mat-divider></mat-divider>
+        </div>
+        <div class="info-header">
+            <h1>Information</h1>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="select-content">
+            <mat-form-field class="task-select" appearance="fill">
+                <mat-label>Category</mat-label>
+                <mat-select (selectionChange)="onCategoryChange($event)">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="task-select" appearance="fill">
+                <mat-label>Level</mat-label>
+                <mat-select (selectionChange)="onLevelChange($event)">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let level of levels" [value]="level">{{level}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="task-select" appearance="fill">
+                <mat-label>Test</mat-label>
+                <mat-select [(value)]="selectedTest">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let test of filteredTests" [value]="test">{{test.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="info-content">
+            <mat-card class="info-card">
+                <div class="info-title-container">
+                    <mat-card-title>NUMBER OF QUESTIONS</mat-card-title>
+                    <mat-card-subtitle>Total number of questions test consist</mat-card-subtitle>
+                </div>
+                <div class="info-badge">{{selectedTest?.questions?.length || 0}}</div>
+            </mat-card>
+            <mat-card class="info-card">
+                <div class="info-title-container">
+                    <mat-card-title>ETA</mat-card-title>
+                    <mat-card-subtitle>Estimated time of arrival(min)</mat-card-subtitle>
+                </div>
+                <div class="info-badge">{{selectedTest?.eta || 0}}</div>
+            </mat-card>
+            <mat-card class="info-card">
+                <div class="info-title-container">
+                    <mat-card-title>LEVEL</mat-card-title>
+                    <mat-card-subtitle>Complexity level based on test</mat-card-subtitle>
+                </div>
+                <div class="info-badge">{{selectedTest?.level || 'None'}}</div>
+            </mat-card>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="actions">
+        <button mat-raised-button class="action-button" color="primary" [disabled]="!selectedTest" (click)="onSubmit()">CONTINUE</button>
+        <button mat-stroked-button class="action-button" color="warn" routerLink="/home">CANCEL</button>
+    </div>
+</div>

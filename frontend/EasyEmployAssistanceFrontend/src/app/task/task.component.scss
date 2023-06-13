@@ -1,0 +1,67 @@
+.tasks-container {
+    height: 100%;
+    width: 65vw;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content {
+    height: 450px;
+    display: flex;
+}
+
+.select-header {
+    width: 300px;
+    color: black;
+}
+
+.info-header {
+    width: 450px;
+    color: black;
+}
+
+.select-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-content {
+    margin-left: 90px;
+}
+
+.info-card {
+    width: 410px;
+    margin-top: 30px;
+    margin-left: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-badge {
+    display: flex;
+    align-items: center;
+}
+
+.info-title-container {
+    height: 45px;
+}
+
+.task-select {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.action-button {
+    margin-right: 15px;
+    height: 40px;
+    width: 160px;
+}

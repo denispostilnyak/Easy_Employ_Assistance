@@ -1,0 +1,9 @@
+<div class="custom">
+    <textarea class="text-area" matInput>{{textAreaData}}</textarea>
+    <ng-template *ngIf="voiceActiveSectionError">
+        <span>Didn't catch that</span>
+    </ng-template>
+    <button id="startButton" mat-icon-button class="toogle-camera" (click)="startVoiceRecognition()">
+        <mat-icon>keyboard_voice</mat-icon>
+    </button>
+</div>

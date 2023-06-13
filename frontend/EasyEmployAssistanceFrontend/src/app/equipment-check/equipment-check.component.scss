@@ -1,0 +1,86 @@
+.check-container {
+    height: 600px;
+    width: 70vw;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check-header {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+}
+
+.camera-container {
+    padding-top: 2rem;
+    width: fit-content;
+}
+
+.start-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+}
+
+.toogle-camera {
+    color: #000;
+}
+
+.camera-off {
+    width: 500px;
+    height: 375px;
+    background-color: #000;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.voice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.voice-meter {
+    width: 200px;
+}
+
+div#meters>div {
+    margin: 0 0 1em 0;
+}
+
+div#meters div.label {
+    display: inline-block;
+    font-weight: 400;
+    margin: 0 0.5em 0 0;
+    width: 3.5em;
+}
+
+.value {
+    display: inline-block;
+    font-size: 25px;
+}
+
+meter {
+    width: 50%;
+}
+
+meter#clip {
+    color: #db4437;
+}
+
+meter#slow {
+    color: #f4b400;
+}
+
+meter#instant {
+    color: #0f9d58;
+}

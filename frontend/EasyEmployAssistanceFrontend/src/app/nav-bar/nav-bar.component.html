@@ -1,0 +1,52 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <div class="logo-title-container">
+        <img class="logo" src="../../assets/images/logo.svg">
+        <h3 class="title">Easy Employ Assistance</h3>
+    </div>
+    <div class="user-profile">
+        <button *ngIf="(auth.isAuthenticated$ | async) === false" mat-raised-button class="head-tollbar__auth-button" color="accent"
+            (click)="login()">Log In</button>
+        <button *ngIf="(auth.isAuthenticated$ | async) === true" mat-raised-button class="head-tollbar__auth-button" color="accent"
+            (click)="logout()">Log Out</button>
+    </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+        <div class="user-info-container">
+            <div *ngIf="auth.user$ | async as user">
+                <img *ngIf="user.picture" class="avatar mat-elevation-z8" [src]="user.picture">
+                <h4 class="name">{{user?.name}}</h4>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="/tasks">
+            <mat-icon>assignment</mat-icon>
+            <span>Tasks</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="/help">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

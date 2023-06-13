@@ -1,0 +1,67 @@
+input.ng-invalid.ng-dirty {
+    border-bottom-color: #e91e63 !important;
+    box-shadow: 0 1px 0 0 #e91e63 !important;
+}
+
+button.btn-submit {
+    width: 100%;
+}
+
+ul.answer li:hover {
+    background-color: #26a69a;
+    color: #eafaf9;
+    cursor: pointer;
+}
+
+ul li.selected {
+    background-color: #26a69a !important;
+    color: #eafaf9 !important;
+}
+
+.quiz-container {
+    width: 70vw;
+    height: 80vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+
+    .quiz-content {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    .videos-container {
+        display: flex;
+        padding-left: 10px;
+        justify-content: flex-end;
+    }
+
+    .voice-container {
+        padding-left: 10px;
+        margin-bottom: 70px;
+        padding-right: 10px;
+    }
+
+    .actions-container {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 20px;
+    }
+}
+
+.toogle-camera {
+    color: #000;
+}
+
+.collection-item {
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+}
+
+.progress {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

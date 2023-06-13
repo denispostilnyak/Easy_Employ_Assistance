@@ -1,0 +1,33 @@
+<div class="check-container">
+    <div class="check-header">
+        <h1>Check your microphone and camera</h1>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="content">
+        <div class="camera-container">
+            <webcam [height]="500" [width]="500" *ngIf="showWebcam" [trigger]="triggerObservable"></webcam>
+            <div class="camera-off" *ngIf="!showWebcam"></div>
+            <div class="actions-container">
+                <button mat-icon-button class="toogle-camera" (click)="toggleWebcam()">
+                    <mat-icon *ngIf="showWebcam">videocam</mat-icon>
+                    <mat-icon *ngIf="!showWebcam">videocam_off</mat-icon>
+                </button>
+                <button id="startButton" mat-icon-button class="toogle-camera">
+                    <mat-icon>keyboard_voice</mat-icon>
+                </button>
+            </div>
+            <div id="container" class="voice-container">
+                <div id="meters">
+                    <div id="instant">
+                        <meter low="0.25" high="0.75" max="1" value="0" class="voice-meter"></meter>
+                        <div class="value"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="start-container">
+            <h1>Ready to start ?</h1>
+            <button routerLink="/tasks/quiz" mat-stroked-button>Start</button>
+        </div>
+    </div>
+</div>
